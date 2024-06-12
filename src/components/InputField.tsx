@@ -1,5 +1,5 @@
-import Input from './Input';
-import ErrorMessage from './ErrorMessage';
+import Input from '@/components/Input';
+import ErrorMessage from '@/components/ErrorMessage';
 
 interface InputFieldProps {
   id: string;
