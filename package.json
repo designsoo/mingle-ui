@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fontsource/plus-jakarta-sans": "^5.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
