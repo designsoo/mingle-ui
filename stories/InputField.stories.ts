@@ -40,13 +40,24 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const EmailField: Story = {
   args: {
     id: 'email',
     name: 'email',
     type: 'email',
     placeholder: 'Email',
-    errorMessage: 'email is required',
+    errorMessage: 'Email is required',
+    isError: true,
+  },
+};
+
+export const PasswordField: Story = {
+  args: {
+    id: 'password',
+    name: 'password',
+    type: 'password',
+    placeholder: 'Password',
+    errorMessage: 'Password is required',
     isError: true,
   },
 };
