@@ -1,3 +1,40 @@
 @tailwind base;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    @apply font-jakarta;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .visually-hidden {
+    overflow: hidden !important;
+
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+
+    white-space: nowrap !important;
+
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+
+    &:not(caption) {
+      position: absolute !important;
+    }
+  }
+}
