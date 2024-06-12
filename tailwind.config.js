@@ -4,128 +4,124 @@ export default {
   darkMode: false,
   theme: {
     extend: {
-      colors: {
-        'primary-300': '#F5E724',
-        'primary-400': '#DDD020',
-      },
       fontFamily: {
         jakarta: 'Plus Jakarta Sans',
       },
       fontSize: {
         'base-12': [
-          '1.2rem',
+          '0.75rem', // 12px
           {
-            lineHeight: '1.8rem',
+            lineHeight: '1.125rem', // 18px
             fontWeight: 400,
           },
         ],
         'base-13': [
-          '1.3rem',
+          '0.8125rem', // 13px
           {
-            lineHeight: '1.8rem',
+            lineHeight: '1.125rem', // 18px
             fontWeight: 400,
           },
         ],
         'bold-13': [
-          '1.3rem',
+          '0.8125rem', // 13px
           {
-            lineHeight: '1.8rem',
+            lineHeight: '1.125rem', // 18px
             fontWeight: 600,
           },
         ],
         'base-14': [
-          '1.4rem',
+          '0.875rem', // 14px
           {
-            lineHeight: '2rem',
+            lineHeight: '1.25rem', // 20px
             fontWeight: 400,
           },
         ],
         'bold-14': [
-          '1.4rem',
+          '0.875rem', // 14px
           {
-            lineHeight: '2rem',
+            lineHeight: '1.25rem', // 20px
             fontWeight: 600,
           },
         ],
         'base-16': [
-          '1.6rem',
+          '1rem', // 16px
           {
-            lineHeight: '2.4rem',
+            lineHeight: '1.5rem', // 24px
             fontWeight: 400,
           },
         ],
         'bold-16': [
-          '1.6rem',
+          '1rem', // 16px
           {
-            lineHeight: '2.4rem',
+            lineHeight: '1.5rem', // 24px
             fontWeight: 600,
           },
         ],
         'base-18': [
-          '1.8rem',
+          '1.125rem', // 18px
           {
-            lineHeight: '2.8rem',
+            lineHeight: '1.75rem', // 28px
             fontWeight: 400,
           },
         ],
         'bold-18': [
-          '1.8rem',
+          '1.125rem', // 18px
           {
-            lineHeight: '2.8rem',
+            lineHeight: '1.75rem', // 28px
             fontWeight: 600,
           },
         ],
         'base-20': [
-          '2rem',
+          '1.25rem', // 20px
           {
-            lineHeight: '2.8rem',
+            lineHeight: '1.75rem', // 28px
             fontWeight: 400,
           },
         ],
         'bold-20': [
-          '2rem',
+          '1.25rem', // 20px
           {
-            lineHeight: '2.8rem',
+            lineHeight: '1.75rem', // 28px
             fontWeight: 600,
           },
         ],
         'base-24': [
-          '2.4rem',
+          '1.5rem', // 24px
           {
-            lineHeight: '3.4rem',
+            lineHeight: '2.125rem', // 34px
             fontWeight: 400,
           },
         ],
         'bold-24': [
-          '2.4rem',
+          '1.5rem', // 24px
           {
-            lineHeight: '3.4rem',
+            lineHeight: '2.125rem', // 34px
             fontWeight: 600,
           },
         ],
         'base-32': [
-          '3.2rem',
+          '2rem', // 32px
           {
-            lineHeight: '4.2rem',
+            lineHeight: '2.625rem', // 42px
             fontWeight: 400,
           },
         ],
         'bold-32': [
-          '3.2rem',
+          '2rem', // 32px
           {
-            lineHeight: '4.2rem',
+            lineHeight: '2.625rem', // 42px
             fontWeight: 600,
           },
         ],
       },
       keyframes: {
         fadeUp: {
-          from: { transform: 'translateY(2rem)', opacity: 0 },
+          from: { transform: 'translateY(1.25rem)', opacity: 0 }, // 20px
           to: { transform: 'translateY(0)', opacity: 1 },
         },
         fadeDown: {
           from: { transform: 'translateY(0)', opacity: 0 },
-          to: { transform: 'translateY(4rem)', opacity: 1 },
+          to: { transform: 'translateY(2.5rem)', opacity: 1 }, // 40px
         },
       },
       animation: {
