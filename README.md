@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# mingle-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+mingle-ui is a comprehensive design system built with Tailwind CSS and Storybook, designed to empower developers and designers to build consistent and beautiful interfaces efficiently.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install mingle-ui into your project using NPM:
 
-## Expanding the ESLint configuration
+```bash
+npm install mingle-ui
+```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
 
-- Configure the top-level `parserOptions` property like this:
+You can import components from mingle-ui directly as shown below:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+```typescript
+import { Label, InputField } from "mingle-ui";
+
+export default function LoginPage() {
+  return (
+    ...
+      <Label htmlFor='email'>Email</Label>
+      <InputField
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Email"
+        errorMessage='Email is required'
+      />
+      <Label htmlFor='password'>Password</Label>
+      <InputField
+        id="password"
+        name="password"
+        type="password"
+        placeholder="Password"
+        errorMessage='Password is required'
+      />
+    ...
+  );
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This ensures that all mingle-ui components render with the intended design specifications.
+
+## Components
+
+mingle-ui offers a wide range of components that are ready to use in your projects. To see the components available and learn how to use them, refer to the Storybook documentation provided with the package.
+
+## License
+
+mingle-ui is released under the MIT License. See the LICENSE file for more details.
