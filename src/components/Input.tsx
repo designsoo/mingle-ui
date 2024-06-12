@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, useState } from 'react';
-import { PASSWORD_SHOW_MODE } from '../constants';
+import { PASSWORD_SHOW_MODE } from '@/constants';
 
 interface InputProps {
   id: string;
