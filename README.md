@@ -27,6 +27,7 @@ export default function LoginPage() {
         type="email"
         placeholder="Email"
         errorMessage='Email is required'
+        isError={false}
       />
       <Label htmlFor='password'>Password</Label>
       <InputField
@@ -35,6 +36,7 @@ export default function LoginPage() {
         type="password"
         placeholder="Password"
         errorMessage='Password is required'
+        isError={false}
       />
     ...
   );
