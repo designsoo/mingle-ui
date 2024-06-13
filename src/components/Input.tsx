@@ -37,7 +37,7 @@ const Input = ({
         className='h-full w-full bg-transparent text-base-16 text-neutral-200 outline-none placeholder:text-neutral-700'
         id={id}
         name={name}
-        type={inputType}
+        type={type === 'password' ? inputType : type}
         placeholder={placeholder}
         {...rest}
       />
