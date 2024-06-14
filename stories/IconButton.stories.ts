@@ -3,7 +3,7 @@ import IconButton from '../src/components/IconButton';
 import { fn } from '@storybook/test';
 
 const meta = {
-  title: 'Button/IconButton',
+  title: 'Buttons/IconButton',
   component: IconButton,
   parameters: {
     layout: 'centered',
@@ -13,11 +13,11 @@ const meta = {
   argTypes: {
     iconUrl: {
       control: 'text',
-      description: 'IconButton의 path',
+      description: 'icon 이미지 파일 경로',
     },
     iconAlt: {
       control: 'text',
-      description: 'IconButton의 alt',
+      description: 'icon 이미지 alt',
     },
     variant: {
       control: 'select',
@@ -32,9 +32,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const DefaultTheme: Story = {
   args: {
     iconUrl: '',
+    iconAlt: 'emoji icon',
+    variant: 'default',
+  },
+};
+
+export const StrokeTheme: Story = {
+  args: {
+    iconUrl:
+      'https://imagedelivery.net/gHftqKLNBQ-NOWw8XS0zUw/97270bfb-6b8d-47e8-1287-cb467772ce00/width=20,height=20',
     iconAlt: 'emoji icon',
     variant: 'stroke',
   },
