@@ -15,9 +15,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.ts'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'mingle-ui',
-      fileName: 'index',
+      fileName: (format) => `index.${format}.js`,
       formats: ['es', 'umd', 'cjs'],
     },
     rollupOptions: {
@@ -29,5 +29,7 @@ export default defineConfig({
         },
       },
     },
+    sourcemap: true,
+    emptyOutDir: true,
   },
 });
