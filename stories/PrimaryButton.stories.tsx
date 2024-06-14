@@ -19,15 +19,17 @@ const meta = {
 
   argTypes: {
     size: {
-      control: 'radio',
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
       description: 'button의 size(기본형: md)',
     },
     variant: {
       control: 'select',
+      options: ['primary', 'secondary', 'stroke'],
       description: 'button의 variant(기본형: primary)',
     },
     children: {
-      control: 'select',
+      control: 'text',
       description: 'button의 text',
     },
   },
