@@ -23,8 +23,24 @@
 }
 
 @layer components {
-  .base-button {
-    @apply h-11 rounded-lg px-4;
+  .button-base {
+    @apply base-transition rounded-lg px-4 flexbox-row;
+  }
+
+  .icon-button-base {
+    @apply base-transition hover:color-background-opacity-white-10 focus:color-background-opacity-white-10 rounded-md flexbox-row focus:outline-none;
+  }
+
+  .button-fill-primary {
+    @apply bg-yellow-300 hover:bg-yellow-400 disabled:bg-neutral-400 disabled:text-neutral-500;
+  }
+
+  .button-fill-secondary {
+    @apply bg-neutral-200 hover:bg-neutral-300 disabled:bg-neutral-400 disabled:text-neutral-500;
+  }
+
+  .button-stroke {
+    @apply color-border-button hover:color-border-button-hover focus:color-border-button-focus border hover:bg-transparent focus:bg-transparent focus:outline-none;
   }
 
   .base-transition {
