@@ -12,4 +12,8 @@ export const SVGS = {
       alt: 'off icon',
     },
   },
+  empty: {
+    url: `${CLOUDFLARE_URL}f1d8565c-836e-4fc1-42fd-1b1364da7b00/${ICON_SIZE_20}`,
+    alt: 'empty icon',
+  },
 };
