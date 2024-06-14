@@ -1,6 +1,6 @@
 # mingle-ui
 
-![mingle-ui-cover](https://github.com/designsoo/mingle-ui/assets/77719310/a073ccdc-91dc-4fd9-b9d6-59f64420ff78)
+![mingle-ui-cover](https://github.com/designsoo/mingle-ui/assets/77719310/935e2e54-8343-4b38-8d80-ae6c7cf4a263)
 
 mingle-ui is a comprehensive design system built with Tailwind CSS and Storybook, designed to empower developers and designers to build consistent and beautiful interfaces efficiently.
 
