@@ -24,23 +24,27 @@
 
 @layer components {
   .button-base {
-    @apply base-transition rounded-lg px-4 flexbox-row;
+    @apply base-transition cursor-pointer rounded-lg flexbox-row focus:outline-none;
   }
 
   .icon-button-base {
-    @apply base-transition hover:color-background-opacity-white-10 focus:color-background-opacity-white-10 rounded-md flexbox-row focus:outline-none;
+    @apply base-transition hover:color-background-opacity-white-10 focus:color-background-opacity-white-10 rounded-md flexbox-row;
   }
 
   .button-fill-primary {
-    @apply bg-yellow-300 hover:bg-yellow-400 disabled:bg-neutral-400 disabled:text-neutral-500;
+    @apply color-text-inverse bg-yellow-300 text-bold-14 hover:bg-yellow-400 focus:bg-yellow-400;
   }
 
   .button-fill-secondary {
-    @apply bg-neutral-200 hover:bg-neutral-300 disabled:bg-neutral-400 disabled:text-neutral-500;
+    @apply color-text-inverse bg-neutral-200 hover:bg-neutral-300 focus:bg-neutral-300;
   }
 
   .button-stroke {
-    @apply color-border-button hover:color-border-button-hover focus:color-border-button-focus border hover:bg-transparent focus:bg-transparent focus:outline-none;
+    @apply color-border-button hover:color-border-button-hover focus:color-border-button-focus color-text-primary border hover:bg-transparent focus:bg-transparent;
+  }
+
+  .button-disabled {
+    @apply disabled:cursor-not-allowed disabled:border-none disabled:bg-neutral-400 disabled:text-neutral-500;
   }
 
   .base-transition {
