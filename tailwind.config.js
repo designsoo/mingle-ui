@@ -150,6 +150,9 @@ export default {
         '.color-background-opacity-white-10': {
           '@apply bg-white bg-opacity-10': '',
         },
+        '.color-background-opacity-black-70': {
+          '@apply bg-black bg-opacity-70': '',
+        },
         '.color-border-button': {
           '@apply border-neutral-700': '',
         },
