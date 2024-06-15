@@ -28,19 +28,19 @@
   }
 
   .icon-button-base {
-    @apply base-transition hover:color-background-opacity-white-10 focus:color-background-opacity-white-10 rounded-md flexbox-row;
+    @apply base-transition rounded-md flexbox-row hover:color-background-opacity-white-10 focus:color-background-opacity-white-10;
   }
 
   .button-fill-primary {
-    @apply color-text-inverse bg-yellow-300 text-bold-14 hover:bg-yellow-400 focus:bg-yellow-400;
+    @apply bg-yellow-300 text-bold-14 color-text-inverse hover:bg-yellow-400 focus:bg-yellow-400;
   }
 
   .button-fill-secondary {
-    @apply color-text-inverse bg-neutral-200 hover:bg-neutral-300 focus:bg-neutral-300;
+    @apply bg-neutral-200 color-text-inverse hover:bg-neutral-300 focus:bg-neutral-300;
   }
 
   .button-stroke {
-    @apply color-border-button hover:color-border-button-hover focus:color-border-button-focus color-text-primary border hover:bg-transparent focus:bg-transparent;
+    @apply border color-text-primary color-border-button hover:bg-transparent hover:color-border-button-hover focus:bg-transparent focus:color-border-button-focus;
   }
 
   .button-disabled {
@@ -52,7 +52,7 @@
   }
 
   .input-field > p {
-    @apply absolute -bottom-6;
+    @apply absolute -bottom-5;
   }
 }
 
