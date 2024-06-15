@@ -1,35 +1,36 @@
-import Input from '@/components/Input';
-import ErrorMessage from '@/components/ErrorMessage';
 import { InputHTMLAttributes } from 'react';
+import Input from '@/components/Input';
+import Label from './Label';
 
 interface InputFieldProps {
-  id: string;
+  label: string;
   name: string;
   type: string;
   placeholder: string;
   errorMessage: string;
-  isError: boolean;
+  isRequired?: boolean;
 }
 
 const InputField = ({
-  id,
+  label,
   name,
   type,
   placeholder,
   errorMessage,
-  isError = false,
+  isRequired,
   ...rest
 }: InputFieldProps & InputHTMLAttributes<HTMLInputElement>) => {
   return (
     <div className='input-field relative'>
+      <Label htmlFor={name}>{label}</Label>
       <Input
-        id={id}
         name={name}
         type={type}
         placeholder={placeholder}
+        errorMessage={errorMessage}
+        isRequired={isRequired}
         {...rest}
       />
-      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   );
 };
