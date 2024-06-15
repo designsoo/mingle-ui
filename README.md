@@ -1,6 +1,6 @@
 # mingle-ui
 
-![mingle-ui-cover](https://github.com/designsoo/mingle-ui/assets/77719310/935e2e54-8343-4b38-8d80-ae6c7cf4a263)
+<img width="1920" alt="mingle-ui-cover" src="https://github.com/designsoo/mingle-ui/assets/77719310/6ea7a02c-aeba-4f76-9619-6509ce11a574">
 
 mingle-ui is a comprehensive design system built with Tailwind CSS and Storybook, designed to empower developers and designers to build consistent and beautiful interfaces efficiently.
 
@@ -17,32 +17,49 @@ npm install mingle-ui
 You can import components from mingle-ui directly as shown below:
 
 ```typescript
-import { Label, InputField } from "mingle-ui";
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { InputField, PrimaryButton } from "mingle-ui";
 
-export default function LoginPage() {
+interface FormValues {
+  email: string;
+  Password: string;
+}
+
+function LoginPage() {
+  const methods = useForm<FormValues>({
+    mode: 'all',
+  });
+
+  const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
+
   return (
-    ...
-      <Label htmlFor='email'>Email</Label>
-      <InputField
-        id="email"
-        name="email"
-        type="email"
-        placeholder="Email"
-        errorMessage='Email is required'
-        isError={false}
-      />
-      <Label htmlFor='password'>Password</Label>
-      <InputField
-        id="password"
-        name="password"
-        type="password"
-        placeholder="Password"
-        errorMessage='Password is required'
-        isError={false}
-      />
-    ...
+    <FormProvider {...methods}>
+      <form onSubmit={methods.handleSubmit(onSubmit)}>
+        <InputField
+          label='email'
+          name='email'
+          placeholder='Email'
+          type='email'
+          errorMessage='Email is Required'
+          isRequired
+        />
+
+        <InputField
+          label='password'
+          name='password'
+          placeholder='Password'
+          type='password'
+          errorMessage='Password is Required'
+          isRequired
+        />
+
+        <PrimaryButton>Login</PrimaryButton>
+      </form>
+    </FormProvider>
   );
 }
+
+export default LoginPage;
 ```
 
 This ensures that all mingle-ui components render with the intended design specifications.
