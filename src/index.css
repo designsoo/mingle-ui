@@ -57,21 +57,33 @@
 }
 
 @layer utilities {
-  .visually-hidden {
-    overflow: hidden !important;
+  .text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-word;
 
-    width: 1px !important;
-    height: 1px !important;
-    margin: -1px !important;
-    padding: 0 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
 
-    white-space: nowrap !important;
+  .scroll-bar-sm {
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-xl bg-neutral-600;
+    }
 
-    clip: rect(0, 0, 0, 0) !important;
-    border: 0 !important;
+    &::-webkit-scrollbar-track {
+      @apply bg-transparent;
+    }
 
-    &:not(caption) {
-      position: absolute !important;
+    &::-webkit-scrollbar {
+      @apply w-[6px];
+    }
+  }
+
+  .no-scrollbar {
+    &::-webkit-scrollbar {
+      @apply hidden;
     }
   }
 }
