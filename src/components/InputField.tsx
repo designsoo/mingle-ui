@@ -1,6 +1,6 @@
 import { InputHTMLAttributes } from 'react';
 import Input from '@/components/Input';
-import Label from './Label';
+import Label from '@/components/Label';
 
 interface InputFieldProps {
   label: string;
