@@ -68,6 +68,12 @@ This ensures that all mingle-ui components render with the intended design speci
 
 mingle-ui offers a wide range of components that are ready to use in your projects. To see the components available and learn how to use them, refer to the Storybook documentation provided with the package.
 
+## Storybook
+
+<a href='https://6669e8d86796066d6df5993c-hcmhpriexh.chromatic.com/?path=/docs/badge-badgeemoji--docs' target='_blank'>
+  🔗 Mingle Design System - Storybook
+</a>
+
 ## License
 
 mingle-ui is released under the MIT License. See the LICENSE file for more details.
