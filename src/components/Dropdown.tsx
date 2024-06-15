@@ -16,7 +16,7 @@ type SelectList<T> = {
 
 interface DropdownProps<T> {
   selectList: SelectList<T>[];
-  onclick: (id: T) => void;
+  onClick: (id: T) => void;
   size?: DropdownSize;
 }
 
@@ -27,7 +27,7 @@ const DropdownTheme: Record<DropdownSize, string> = {
 
 const Dropdown = <T,>({
   selectList,
-  onclick,
+  onClick,
   size = 'md',
 }: DropdownProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const Dropdown = <T,>({
 
   const handleSelectItemClick = (id: T, value: string) => {
     setSeletedItem(value);
-    onclick(id);
+    onClick(id);
     setIsOpen(false);
   };
 
