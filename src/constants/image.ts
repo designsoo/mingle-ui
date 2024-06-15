@@ -5,11 +5,11 @@ export const SVGS = {
   eye: {
     on: {
       url: `${CLOUDFLARE_URL}6c54eafe-3e97-4c82-2ac5-f6d44ca95100/${ICON_SIZE_20}`,
-      alt: 'show icon',
+      alt: 'show password',
     },
     off: {
       url: `${CLOUDFLARE_URL}159fda3c-e69a-4c20-44cf-3d477efda000/${ICON_SIZE_20}`,
-      alt: 'off icon',
+      alt: 'hide password',
     },
   },
   empty: {
