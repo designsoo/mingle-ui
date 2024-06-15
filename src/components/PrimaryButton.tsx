@@ -3,7 +3,7 @@ type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface PrimaryButtonProps {
   children: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   size?: ButtonSize;
   variant?: ButtonTheme;
   disabled?: boolean;
