@@ -6,12 +6,14 @@ const {
 interface IconButtonProps {
   iconAlt: string;
   iconUrl: string;
-  variant: 'default' | 'stroke';
+  iconSize: number;
+  variant?: 'default' | 'stroke';
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const IconButton = ({
   onClick,
+  iconSize,
   iconAlt = '',
   iconUrl = '',
   variant = 'default',
@@ -23,7 +25,12 @@ const IconButton = ({
       onClick={onClick}
       className={`icon-button-base size-9 ${strokeTheme}`}
     >
-      <img src={iconUrl || url} alt={iconAlt || alt} />
+      <img
+        src={iconUrl || url}
+        alt={iconAlt || alt}
+        width={iconSize}
+        height={iconSize}
+      />
     </button>
   );
 };
