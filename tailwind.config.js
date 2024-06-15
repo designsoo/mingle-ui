@@ -147,6 +147,9 @@ export default {
         '.color-border-category': {
           '@apply border-neutral-500': '',
         },
+        '.color-background-opacity-white-5': {
+          '@apply bg-white bg-opacity-5': '',
+        },
         '.color-background-opacity-white-10': {
           '@apply bg-white bg-opacity-10': '',
         },
