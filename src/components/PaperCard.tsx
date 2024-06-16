@@ -1,18 +1,18 @@
 import Category from '@/components/Category';
 
-interface PaperCradProps {
+interface PaperCardProps {
   category: string;
   fromName: string;
   description: string;
   backgroundImage: string;
 }
 
-const PaperCrad = ({
+const PaperCard = ({
   category,
   fromName,
   description,
   backgroundImage,
-}: PaperCradProps) => {
+}: PaperCardProps) => {
   function createMarkup(html: string) {
     return { __html: html };
   }
@@ -41,4 +41,4 @@ const PaperCrad = ({
   );
 };
 
-export default PaperCrad;
+export default PaperCard;
