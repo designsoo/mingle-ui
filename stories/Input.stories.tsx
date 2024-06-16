@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { useForm, FormProvider } from 'react-hook-form';
 import Input from '../src/components/Input';
 
-const meta = {
+const meta: Meta<typeof Input> = {
   title: 'InputField/Input',
   component: Input,
   parameters: {
@@ -19,6 +19,10 @@ const meta = {
     type: {
       control: 'text',
       description: 'Input의 type',
+    },
+    formMethod: {
+      control: 'object',
+      description: 'react-hook-form의 메소드',
     },
     placeholder: {
       control: 'text',
@@ -42,7 +46,7 @@ const Template = (args) => {
   const methods = useForm();
   return (
     <FormProvider {...methods}>
-      <Input {...args} />
+      <Input {...args} formMethod={methods} />
     </FormProvider>
   );
 };
