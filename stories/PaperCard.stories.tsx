@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import PaperCrad from '../src/components/PaperCrad';
+import PaperCard from '../src/components/PaperCard';
 
 const meta = {
-  title: 'Cards/PaperCrad',
-  component: PaperCrad,
+  title: 'Cards/PaperCard',
+  component: PaperCard,
   parameters: {
     layout: 'centered',
   },
@@ -33,7 +33,7 @@ const meta = {
       description: '배경 이미지',
     },
   },
-} satisfies Meta<typeof PaperCrad>;
+} satisfies Meta<typeof PaperCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
