@@ -22,6 +22,7 @@ const IconButton = ({
 
   return (
     <button
+      type='button'
       onClick={onClick}
       className={`icon-button-base size-9 ${strokeTheme}`}
     >

@@ -34,6 +34,7 @@ const TabList = <T,>({ tabList, onClick, size = 'md' }: TabProps<T>) => {
       {tabList.map((tab) => (
         <li key={`tab-${tab.id}`}>
           <button
+            type='button'
             className={`flex items-center text-base-16 text-neutral-500 ${TabListSize[size]} ${isActivated(tab.id) && 'relative text-bold-16 *:text-yellow-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-yellow-300 after:content-[attr(before)]'}`}
             onClick={() => handleTabItemClick(tab.id)}
           >
