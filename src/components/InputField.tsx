@@ -7,7 +7,7 @@ interface InputFieldProps {
   name: string;
   type: string;
   placeholder: string;
-  errorMessage: string;
+  errorMessage?: string;
   isRequired?: boolean;
 }
 

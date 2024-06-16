@@ -7,7 +7,7 @@ interface InputProps {
   name: string;
   type: string;
   placeholder: string;
-  errorMessage: string;
+  errorMessage?: string;
   isRequired?: boolean;
 }
 
@@ -15,7 +15,7 @@ const Input = ({
   name,
   type,
   placeholder,
-  errorMessage,
+  errorMessage = '',
   isRequired = false,
   ...rest
 }: InputProps & InputHTMLAttributes<HTMLInputElement>) => {
@@ -65,7 +65,9 @@ const Input = ({
         )}
       </div>
 
-      {errors[name] && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      {isRequired && errors[name] && (
+        <ErrorMessage>{errorMessage}</ErrorMessage>
+      )}
     </>
   );
 };
