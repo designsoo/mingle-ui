@@ -33,6 +33,7 @@ const PaperCard = ({
         </div>
         <h2 className='pb-3 text-bold-18 text-neutral-200'>{fromName}</h2>
         <p
+          tabIndex={0}
           dangerouslySetInnerHTML={createMarkup(description)}
           className='scroll-bar-sm h-[140px] overflow-y-scroll pr-2 text-base-16 text-neutral-400'
         ></p>
