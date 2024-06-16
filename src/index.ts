@@ -9,3 +9,5 @@ export { default as Category } from '@/components/Category.tsx';
 export { default as IconButton } from '@/components/IconButton.tsx';
 export { default as PrimaryButton } from '@/components/PrimaryButton.tsx';
 export { default as TabList } from '@/components/TabList.tsx';
+export { default as Dropdown } from '@/components/Dropdown.tsx';
+export { default as PaperCard } from '@/components/PaperCard';
