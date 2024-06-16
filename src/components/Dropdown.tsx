@@ -52,7 +52,7 @@ const Dropdown = <T,>({
           {selectedItem}
         </span>
 
-        <button className='pl-3'>
+        <button className='pl-3' type='button'>
           <img
             src={url}
             alt={alt}
@@ -67,7 +67,8 @@ const Dropdown = <T,>({
           {selectList.map((item) => (
             <li key={`dropdown-key-${item.id}`}>
               <button
-                className='hover:color-background-opacity-white-5 base-transition h-9 w-full rounded-md px-2 py-[6px] text-start hover:text-neutral-200'
+                type='button'
+                className='base-transition h-9 w-full rounded-md px-2 py-[6px] text-start hover:text-neutral-200 hover:color-background-opacity-white-5'
                 onClick={() => handleSelectItemClick(item.id, item.value)}
               >
                 {item.value}
