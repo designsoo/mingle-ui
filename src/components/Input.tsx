@@ -1,28 +1,36 @@
 import { InputHTMLAttributes, useState } from 'react';
 import { PASSWORD_SHOW_MODE } from '@/constants';
-import { useFormContext } from 'react-hook-form';
 import ErrorMessage from '@/components/ErrorMessage';
+import { FieldValues, UseFormReturn } from 'react-hook-form';
 
-interface InputProps {
+interface CustomInputProps {
   name: string;
   type: string;
+  formMethod: UseFormReturn<FieldValues>;
   placeholder: string;
   errorMessage?: string;
   isRequired?: boolean;
 }
 
+type InputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  keyof CustomInputProps
+> &
+  CustomInputProps;
+
 const Input = ({
   name,
   type,
+  formMethod,
   placeholder,
   errorMessage = '',
   isRequired = false,
   ...rest
-}: InputProps & InputHTMLAttributes<HTMLInputElement>) => {
+}: InputProps) => {
   const {
     register,
     formState: { errors },
-  } = useFormContext();
+  } = formMethod;
 
   const [isFocused, setIsFocused] = useState(false);
   const borderColor = isFocused ? 'border-yellow-300' : 'border-neutral-700';
