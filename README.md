@@ -17,42 +17,37 @@ npm install mingle-ui
 You can import components from mingle-ui directly as shown below:
 
 ```typescript
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import { InputField, PrimaryButton } from "mingle-ui";
 
-interface FormValues {
-  email: string;
-  Password: string;
-}
-
 function LoginPage() {
-  const methods = useForm<FormValues>({
+  const methods = useForm({
     mode: 'all',
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
+  const onSubmit = (data) => {console.log(data)};
 
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
         <InputField
-          label='email'
+          formMethod={methods}
           name='email'
-          placeholder='Email'
           type='email'
+          placeholder='Email'
+          label='Email'
           errorMessage='Email is Required'
           isRequired
         />
-
         <InputField
-          label='password'
+          formMethod={methods}
           name='password'
-          placeholder='Password'
           type='password'
+          placeholder='Password'
+          label='Password'
           errorMessage='Password is Required'
           isRequired
         />
-
         <PrimaryButton>Login</PrimaryButton>
       </form>
     </FormProvider>
