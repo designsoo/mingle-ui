@@ -29,7 +29,8 @@
     "baseUrl": "./src",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/constants/*": ["constants/*"]
+      "@/constants/*": ["constants/*"],
+      "@/hooks/*": ["hooks/*"]
     }
   },
   "include": ["src"],
