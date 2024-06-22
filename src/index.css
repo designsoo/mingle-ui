@@ -54,6 +54,10 @@
   .input-field > p {
     @apply absolute -bottom-5;
   }
+
+  .dropdown-shadow {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.6);
+  }
 }
 
 @layer utilities {
