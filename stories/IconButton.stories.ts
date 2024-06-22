@@ -19,6 +19,10 @@ const meta = {
       control: 'text',
       description: 'icon 이미지 alt',
     },
+    iconSize: {
+      control: 'number',
+      description: 'icon 사이즈',
+    },
     variant: {
       control: 'select',
       description: 'IconButton의 variant(기본형: default)',
@@ -36,6 +40,7 @@ export const DefaultTheme: Story = {
   args: {
     iconUrl: '',
     iconAlt: 'emoji icon',
+    iconSize: 20,
     variant: 'default',
   },
 };
@@ -45,6 +50,7 @@ export const StrokeTheme: Story = {
     iconUrl:
       'https://imagedelivery.net/gHftqKLNBQ-NOWw8XS0zUw/97270bfb-6b8d-47e8-1287-cb467772ce00/width=20,height=20',
     iconAlt: 'emoji icon',
+    iconSize: 20,
     variant: 'stroke',
   },
 };
