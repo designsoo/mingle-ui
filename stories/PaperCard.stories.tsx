@@ -8,12 +8,12 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
   decorators: (Story) => (
     <div style={{ width: '320px' }}>
       <Story />
     </div>
   ),
+  tags: ['autodocs'],
 
   argTypes: {
     category: {
