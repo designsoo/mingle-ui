@@ -32,7 +32,7 @@ export const MediumSize: Story = {
       { id: 1, value: 'Oldest' },
     ],
     size: 'md',
-    onclick: (id) => console.log(id),
+    onClick: (id) => console.log(id),
   },
 };
 
@@ -43,6 +43,6 @@ export const SmallSize: Story = {
       { id: 1, value: 'Oldest' },
     ],
     size: 'sm',
-    onclick: (id) => console.log(id),
+    onClick: (id) => console.log(id),
   },
 };
