@@ -9,6 +9,16 @@ const meta: Meta<typeof Input> = {
   parameters: {
     layout: 'centered',
   },
+  decorators: [
+    (Story, context) => {
+      const methods = useForm();
+      return (
+        <FormProvider {...methods}>
+          <Story {...context} args={{ ...context.args, formMethod: methods }} />
+        </FormProvider>
+      );
+    },
+  ],
   tags: ['autodocs'],
 
   argTypes: {
@@ -42,31 +52,24 @@ const meta: Meta<typeof Input> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const Template = (args) => {
-  const methods = useForm();
-  return (
-    <FormProvider {...methods}>
-      <Input {...args} formMethod={methods} />
-    </FormProvider>
-  );
+export const Email: Story = {
+  args: {
+    id: 'email',
+    name: 'email',
+    type: 'email',
+    placeholder: 'Email',
+    errorMessage: 'Email is required',
+    isRequired: true,
+  },
 };
 
-export const Email: Story = Template.bind({});
-Email.args = {
-  id: 'email',
-  name: 'email',
-  type: 'email',
-  placeholder: 'Email',
-  errorMessage: 'Email is required',
-  isRequired: true,
-};
-
-export const Password: Story = Template.bind({});
-Password.args = {
-  id: 'password',
-  name: 'password',
-  type: 'password',
-  placeholder: 'Password',
-  errorMessage: 'Password is required',
-  isRequired: true,
+export const Password: Story = {
+  args: {
+    id: 'password',
+    name: 'password',
+    type: 'password',
+    placeholder: 'Password',
+    errorMessage: 'Password is required',
+    isRequired: true,
+  },
 };
