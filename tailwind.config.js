@@ -3,6 +3,20 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      keyframes: {
+        'fade-up': {
+          '0%': { transform: 'translateY(2rem)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'fade-down': {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(2rem)', opacity: '0' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.3s linear',
+        'fade-down': 'fade-down 0.3s linear',
+      },
       fontFamily: {
         jakarta: 'Plus Jakarta Sans',
       },
@@ -155,6 +169,12 @@ export default {
         },
         '.color-background-opacity-black-70': {
           '@apply bg-black bg-opacity-70': '',
+        },
+        '.color-background-opacity-black-30': {
+          '@apply bg-black bg-opacity-30': '',
+        },
+        '.color-background-opacity-yellow-20': {
+          '@apply bg-yellow-300 bg-opacity-20': '',
         },
         '.color-border-button': {
           '@apply border-neutral-700': '',
