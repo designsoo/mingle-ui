@@ -1,17 +1,16 @@
+import { SVGS } from '@/constants';
+const {
+  find: { url, alt },
+} = SVGS;
+
 const EmptyCard = () => {
   return (
-    <div className='flex h-[400px] w-full flex-col justify-end overflow-hidden rounded-2xl bg-neutral-800 p-4'>
-      <div className='relative h-[240px] overflow-hidden rounded-xl p-4 pt-11 color-background-opacity-white-5'>
-        <div className='absolute right-4 top-4 h-7 w-16 animate-pulse rounded bg-neutral-600'></div>
-        <div className='mb-5 h-7 w-[180px] animate-pulse rounded-lg bg-neutral-600'></div>
-        <ul className='flex flex-col gap-2'>
-          {Array.from({ length: 5 }).map((_, idx: number) => (
-            <li
-              key={`empty-contents-${idx}`}
-              className='h-5 w-full animate-pulse rounded bg-neutral-600'
-            ></li>
-          ))}
-        </ul>
+    <div className='flex h-[400px] w-full overflow-hidden rounded-2xl border-2 border-dashed border-neutral-800 p-4 flexbox-row'>
+      <div className='gap-2 flexbox-column'>
+        <img src={url} alt={alt} width={48} height={48} />
+        <span className='text-bold-16 text-neutral-500'>
+          Mingle Paper Not Found
+        </span>
       </div>
     </div>
   );
