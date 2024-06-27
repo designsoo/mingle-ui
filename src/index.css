@@ -39,6 +39,10 @@
     @apply bg-neutral-200 color-text-inverse hover:bg-neutral-300 focus:bg-neutral-300;
   }
 
+  .button-fill-destructive {
+    @apply bg-red-500 text-neutral-100 hover:bg-red-600 focus:bg-red-600;
+  }
+
   .button-stroke {
     @apply border color-text-primary color-border-button hover:bg-transparent hover:color-border-button-hover focus:bg-transparent focus:color-border-button-focus;
   }
@@ -57,6 +61,26 @@
 
   .dropdown-shadow {
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  .modal {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(32px);
+    overflow: hidden;
+
+    @apply sm:w-auto;
+  }
+
+  .overlay {
+    @apply fixed inset-0 z-[999] h-screen w-full px-5 flexbox-column color-background-opacity-black-30 sm:px-0;
+  }
+
+  .body-open {
+    @apply overflow-hidden;
   }
 }
 
