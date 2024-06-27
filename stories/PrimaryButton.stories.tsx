@@ -25,7 +25,7 @@ const meta = {
     },
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'stroke'],
+      options: ['primary', 'secondary', 'stroke', 'destructive'],
       description: 'button의 variant(기본형: primary)',
     },
     children: {
@@ -55,6 +55,15 @@ export const SecondaryTheme: Story = {
     size: 'md',
     children: 'Button',
     variant: 'secondary',
+    disabled: false,
+  },
+};
+
+export const destructiveTheme: Story = {
+  args: {
+    size: 'md',
+    children: 'Button',
+    variant: 'destructive',
     disabled: false,
   },
 };
