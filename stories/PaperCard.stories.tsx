@@ -32,6 +32,10 @@ const meta = {
       control: 'text',
       description: '배경 이미지',
     },
+    createdAt: {
+      control: 'text',
+      description: '편지 생성일',
+    },
   },
 } satisfies Meta<typeof PaperCard>;
 
@@ -40,11 +44,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    category: 'Friend',
+    category: 'Friends',
     fromName: 'Jennie',
     description: `🥳💖Lorem ipsum dolor sit amet consectetur. Scelerisque m aecenas cras nunc lacus magnis. Fermentum luctus quam sed dignissim. Egestas orci in nibh egestas curabitur ultricies laoreet turpis cras. Placerat in orci vel amet neque morbi.
     Lorem ipsum dolor sit amet consectetur. Scelerisque m aecenas cras nunc lacus magnis. Fermentum luctus quam sed dignissim. Egestas orci in nibh egestas curabitur ultricies laoreet turpis cras. Placerat in orci vel amet neque morbi.`,
     backgroundImage:
       'https://imagedelivery.net/gHftqKLNBQ-NOWw8XS0zUw/ad73a38f-1a45-4bc6-488a-e22bc61a2100/width=600,height=800',
+    createdAt: '2024-06-25T09:43:07.973530Z',
   },
 };
