@@ -12,21 +12,9 @@ interface CustomInputProps {
   isRequired?: boolean;
 }
 
-type InputProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  keyof CustomInputProps
-> &
-  CustomInputProps;
+type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps> & CustomInputProps;
 
-const Input = ({
-  name,
-  type,
-  formMethod,
-  placeholder,
-  errorMessage = '',
-  isRequired = false,
-  ...rest
-}: InputProps) => {
+const Input = ({ name, type, formMethod, placeholder, errorMessage = '', isRequired = false, ...rest }: InputProps) => {
   const {
     register,
     formState: { errors },
@@ -36,9 +24,7 @@ const Input = ({
   const borderColor = isFocused ? 'border-yellow-300' : 'border-neutral-700';
 
   const [passwordShowMode, setPasswordShowMode] = useState(false);
-  const { iconEye, showMode, inputType } = passwordShowMode
-    ? PASSWORD_SHOW_MODE.on
-    : PASSWORD_SHOW_MODE.off;
+  const { iconEye, showMode, inputType } = passwordShowMode ? PASSWORD_SHOW_MODE.on : PASSWORD_SHOW_MODE.off;
 
   const onEyeButtonClick = () => setPasswordShowMode((prev) => !prev);
   const onInputFocus = () => setIsFocused(true);
@@ -73,9 +59,7 @@ const Input = ({
         )}
       </div>
 
-      {isRequired && errors[name] && (
-        <ErrorMessage>{errorMessage}</ErrorMessage>
-      )}
+      {isRequired && errors[name] && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </>
   );
 };
