@@ -13,11 +13,7 @@ interface CustomInputProps {
   isRequired?: boolean;
 }
 
-type InputFieldProps = Omit<
-  InputHTMLAttributes<HTMLInputElement>,
-  keyof CustomInputProps
-> &
-  CustomInputProps;
+type InputFieldProps = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps> & CustomInputProps;
 
 const InputField = ({
   label,
