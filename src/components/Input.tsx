@@ -1,20 +1,29 @@
 import { InputHTMLAttributes, useState } from 'react';
 import { PASSWORD_SHOW_MODE } from '@/constants';
 import ErrorMessage from '@/components/ErrorMessage';
-import { FieldValues, UseFormReturn } from 'react-hook-form';
+import { FieldValues, Path, UseFormReturn } from 'react-hook-form';
 
-interface CustomInputProps {
-  name: string;
+interface CustomInputProps<T extends FieldValues> {
+  name: Path<T>;
   type: string;
-  formMethod: UseFormReturn<FieldValues>;
+  formMethod: UseFormReturn<T>;
   placeholder: string;
   errorMessage?: string;
   isRequired?: boolean;
 }
 
-type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps> & CustomInputProps;
+type InputProps<T extends FieldValues> = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps<T>> &
+  CustomInputProps<T>;
 
-const Input = ({ name, type, formMethod, placeholder, errorMessage = '', isRequired = false, ...rest }: InputProps) => {
+const Input = <T extends FieldValues>({
+  name,
+  type,
+  placeholder,
+  formMethod,
+  errorMessage = '',
+  isRequired = false,
+  ...rest
+}: InputProps<T>) => {
   const {
     register,
     formState: { errors },
@@ -40,7 +49,7 @@ const Input = ({ name, type, formMethod, placeholder, errorMessage = '', isRequi
         <input
           className='h-full w-full bg-transparent text-base-16 text-neutral-200 outline-none placeholder:text-neutral-700'
           {...register(name, { required: isRequired && errorMessage })}
-          id={name}
+          id={name as string}
           type={type === 'password' ? inputType : type}
           placeholder={placeholder}
           {...rest}
