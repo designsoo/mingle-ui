@@ -30,7 +30,7 @@ const PaperCard = ({ category, fromName, description, backgroundImage, createdAt
       <div className='relative flex h-[230px] flex-col justify-end overflow-hidden rounded-xl p-4 color-background-opacity-black-70'>
         <div className='absolute right-4 top-4 flex gap-2'>
           {isNew && (
-            <div className='rounded px-2 backdrop-blur-lg color-background-opacity-yellow-20'>
+            <div className='rounded px-2 backdrop-blur-lg flexbox-row color-background-opacity-yellow-20'>
               <span className='text-center text-base-12 text-yellow-300'>New</span>
             </div>
           )}
