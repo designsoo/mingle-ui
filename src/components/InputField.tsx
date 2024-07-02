@@ -1,37 +1,38 @@
 import { InputHTMLAttributes } from 'react';
 import Input from '@/components/Input';
 import Label from '@/components/Label';
-import { FieldValues, UseFormReturn } from 'react-hook-form';
+import { FieldValues, Path, UseFormReturn } from 'react-hook-form';
 
-interface CustomInputProps {
+interface CustomInputProps<T extends FieldValues> {
   label: string;
-  name: string;
+  name: Path<T>;
   type: string;
-  formMethod: UseFormReturn<FieldValues>;
+  formMethod: UseFormReturn<T>;
   placeholder: string;
   errorMessage?: string;
   isRequired?: boolean;
 }
 
-type InputFieldProps = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps> & CustomInputProps;
+type InputFieldProps<T extends FieldValues> = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps<T>> &
+  CustomInputProps<T>;
 
-const InputField = ({
+const InputField = <T extends FieldValues>({
   label,
   name,
   type,
-  formMethod,
   placeholder,
+  formMethod,
   errorMessage,
   isRequired,
   ...rest
-}: InputFieldProps) => {
+}: InputFieldProps<T>) => {
   return (
     <div className='input-field relative'>
-      <Label htmlFor={name}>{label}</Label>
+      <Label htmlFor={name as string}>{label}</Label>
       <Input
+        formMethod={formMethod}
         name={name}
         type={type}
-        formMethod={formMethod}
         placeholder={placeholder}
         errorMessage={errorMessage}
         isRequired={isRequired}
