@@ -3,20 +3,6 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      keyframes: {
-        'fade-up': {
-          '0%': { transform: 'translateY(2rem)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        'fade-down': {
-          '0%': { transform: 'translateY(0)', opacity: '1' },
-          '100%': { transform: 'translateY(2rem)', opacity: '0' },
-        },
-      },
-      animation: {
-        'fade-up': 'fade-up 0.3s linear',
-        'fade-down': 'fade-down 0.3s linear',
-      },
       fontFamily: {
         jakarta: 'Plus Jakarta Sans',
       },
