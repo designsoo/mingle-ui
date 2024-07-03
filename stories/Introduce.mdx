@@ -1,0 +1,63 @@
+# Welcome to the Mingle Component library
+
+---
+
+mingle-ui is a comprehensive design system built with Tailwind CSS and Storybook, designed to empower developers and designers to build consistent and beautiful interfaces efficiently. mingle-ui provides a set of reusable, customizable components that follow best practices for design and development, ensuring consistency across your projects.
+
+# Install
+
+---
+
+Install mingle-ui into your project using NPM:
+
+```bash
+npm install mingle-ui
+```
+
+```bash
+npm install mingle-ui@latest
+```
+
+# Usage
+
+---
+
+Here’s a basic example of how to use the PrimaryButton component in your project:
+
+```tsx
+import { PrimaryButton } from 'mingle-ui';
+
+const Component = () => {
+  retrun(
+    <>
+      <PrimaryButton type='submit' disabled={isDisabled} onClick={onButtonClick}>
+        Submit
+      </PrimaryButton>
+      <PrimaryButton size='sm' variant='stroke' disabled={isDisabled} onClick={onButtonClick}>
+        Cancel
+      </PrimaryButton>
+      <PrimaryButton size='lg' variant='destructive' disabled={isDisabled} onClick={onButtonClick}>
+        Delete
+      </PrimaryButton>
+    </>,
+  );
+};
+```
+
+# Reporting Bugs
+
+---
+
+If you find a bug, please report it by opening an issue. Include as much detail as possible to help us diagnose and fix the problem quickly.
+
+# Continuous Updates and Error Fixes
+
+---
+
+mingle-ui is continuously updated to improve functionality and fix any bugs. We actively maintain this project and strive to address any issues as soon as possible. Please check the repository regularly for updates and improvements.
+
+# License
+
+---
+
+This project is licensed under the MIT License.
