@@ -15,7 +15,7 @@ const meta = {
       description: '선택된 emoji',
     },
     count: {
-      control: 'text',
+      control: 'number',
       description: 'emoji 총 개수',
     },
   },
@@ -27,6 +27,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     emoji: '🥳',
-    count: '10',
+    count: 10,
   },
 };
