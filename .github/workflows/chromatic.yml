@@ -1,9 +1,6 @@
 # .github/workflows/chromatic.yml
-
 name: 'UI TEST'
-
 on: push
-
 jobs:
   accessiblity-test:
     timeout-minutes: 60
@@ -13,7 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-      - name: Cache Node.js modules
+
+      - name: Cache dependencies
         id: cache-node
         uses: actions/cache@v4
         with:
@@ -21,9 +19,11 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install dependencies
         if: steps.cache-node.outputs.cache-hit != 'true'
         run: npm ci
+
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Build Storybook
@@ -46,7 +46,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Cache Node.js modules
+
+      - name: Cache dependencies
         id: cache-node
         uses: actions/cache@v4
         with:
@@ -54,6 +55,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install dependencies
         if: steps.cache-node.outputs.cache-hit != 'true'
         run: npm ci
