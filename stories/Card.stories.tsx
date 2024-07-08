@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import PaperCard from '../src/components/PaperCard';
+import Card from '../src/components/Card';
 
 const meta = {
-  title: 'Cards/PaperCard',
-  component: PaperCard,
+  title: 'Cards/Card',
+  component: Card,
   parameters: {
     layout: 'centered',
   },
@@ -37,7 +37,7 @@ const meta = {
       description: '편지 생성일',
     },
   },
-} satisfies Meta<typeof PaperCard>;
+} satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
