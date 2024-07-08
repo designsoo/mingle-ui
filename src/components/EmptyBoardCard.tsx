@@ -2,7 +2,7 @@ const EmptyBoardCard = () => {
   return (
     <div className='flex h-[320px] w-[265px] flex-col items-center justify-between rounded-2xl border-2 border-dashed border-neutral-800 p-4'>
       <div className='w-full grow gap-2 flexbox-column'>
-        <span className='text-bold-16 text-neutral-500'>Mingle Board Not Found</span>
+        <span className='text-bold-16 text-neutral-400'>Mingle Board Not Found</span>
       </div>
       <div className='flex h-[136px] w-full flex-col justify-between rounded-lg border border-dashed border-neutral-700 p-3'>
         <div className='h-6 w-32 rounded-md border border-dashed border-neutral-700'></div>
