@@ -1,7 +1,7 @@
 import Category from '@/components/Category';
 import { getDateDiff } from '@/utils/getDateDiff';
 
-interface PaperCardProps {
+interface CardProps {
   category: string;
   fromName: string;
   description: string;
@@ -9,7 +9,7 @@ interface PaperCardProps {
   createdAt: string;
 }
 
-const PaperCard = ({ category, fromName, description, backgroundImage, createdAt }: PaperCardProps) => {
+const Card = ({ category, fromName, description, backgroundImage, createdAt }: CardProps) => {
   function createMarkup(html: string) {
     return { __html: html };
   }
@@ -50,4 +50,4 @@ const PaperCard = ({ category, fromName, description, backgroundImage, createdAt
   );
 };
 
-export default PaperCard;
+export default Card;
