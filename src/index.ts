@@ -16,3 +16,4 @@ export { default as EmptyCard } from '@/components/EmptyCard';
 export { default as CommonModal } from '@/components/CommonModal';
 export { default as ConfirmModal } from '@/components/ConfirmModal';
 export { default as BoardCardSkeleton } from '@/components/BoardCardSkeleton';
+export { default as EmptyBoardCard } from '@/components/EmptyBoardCard';
