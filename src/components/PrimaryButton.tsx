@@ -39,7 +39,7 @@ const PrimaryButton = ({
       onClick={onClick}
       disabled={disabled}
     >
-      <span className='min-w-16 text-white'>{children}</span>
+      <span className='min-w-16'>{children}</span>
     </button>
   );
 };
