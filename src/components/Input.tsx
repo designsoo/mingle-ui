@@ -47,7 +47,7 @@ const Input = <T extends FieldValues>({
         className={`base-transition flex h-11 w-full items-center justify-between rounded-lg border px-4 ${borderColor}`}
       >
         <input
-          className='h-full w-full bg-transparent text-base-16 text-neutral-200 outline-none placeholder:text-neutral-700'
+          className='h-full w-full bg-transparent pr-3 text-base-16 text-neutral-200 outline-none placeholder:text-neutral-700'
           {...register(name, { required: isRequired && errorMessage })}
           id={name as string}
           type={type === 'password' ? inputType : type}
@@ -61,7 +61,7 @@ const Input = <T extends FieldValues>({
             aria-label={showMode}
             aria-checked={passwordShowMode}
             onClick={onEyeButtonClick}
-            className='pl-3'
+            className='flex size-6 shrink-0 items-center justify-center'
           >
             <img src={iconEye} alt={showMode} width={20} height={20} />
           </button>
