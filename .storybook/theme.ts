@@ -6,7 +6,7 @@ export default create({
   brandTitle: 'Mingle Storybook',
   brandUrl: 'https://github.com/designsoo/mingle-ui',
   brandImage:
-    'https://imagedelivery.net/gHftqKLNBQ-NOWw8XS0zUw/64c2ebd4-300b-405f-1de0-664672b8d100/width=124,height=36',
+    'https://imagedelivery.net/gHftqKLNBQ-NOWw8XS0zUw/0235f1de-d4f8-4bc6-53e1-f562ef8cbc00/width=100,height=30',
   brandTarget: '_blank',
 
   colorPrimary: '#1C1C24',
