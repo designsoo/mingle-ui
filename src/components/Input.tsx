@@ -63,7 +63,7 @@ const Input = <T extends FieldValues>({
             onClick={onEyeButtonClick}
             className='pl-3'
           >
-            <img src={iconEye} alt={showMode} />
+            <img src={iconEye} alt={showMode} width={20} height={20} />
           </button>
         )}
       </div>
