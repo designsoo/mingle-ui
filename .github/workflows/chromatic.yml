@@ -1,9 +1,6 @@
 # .github/workflows/chromatic.yml
-
 name: 'UI TEST'
-
 on: push
-
 jobs:
   accessiblity-test:
     timeout-minutes: 60
@@ -13,12 +10,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
+
+      - name: Cache dependencies
+        id: cache-node
+        uses: actions/cache@v4
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
-        run: yarn
+        if: steps.cache-node.outputs.cache-hit != 'true'
+        run: npm ci
+
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Build Storybook
-        run: yarn build-storybook --quiet
+        run: npm run build-storybook --quiet
       - name: Serve Storybook and run tests
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
@@ -37,11 +46,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Cache dependencies
+        id: cache-node
+        uses: actions/cache@v4
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
-        # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
+        if: steps.cache-node.outputs.cache-hit != 'true'
         run: npm ci
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
