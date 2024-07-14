@@ -2,7 +2,8 @@
 
 <img width="1920" alt="mingle-ui-cover" src="https://github.com/designsoo/mingle-ui/assets/77719310/0a5445b8-365a-4204-9272-8f01fb13e914">
 
-**mingle-ui** is a comprehensive design system built with Tailwind CSS and Storybook, designed to empower developers and designers to build consistent and beautiful interfaces efficiently.
+**mingle-ui** is a powerful design system built with Tailwind CSS and Storybook.\
+It’s designed to help developers and designers create consistent, beautiful interfaces effortlessly.
 
 ## Installation
 
@@ -71,7 +72,7 @@ mingle-ui offers a wide range of components that are ready to use in your projec
 
 ## Storybook
 
-<a href='https://6669e8d86796066d6df5993c-qmwowqjqwu.chromatic.com/?path=/docs/stories-introduction--docs' target='_blank'>
+<a href='https://6669e8d86796066d6df5993c-srbezslies.chromatic.com/?path=/docs/stories-introduction--docs' target='_blank'>
   🔗 Mingle Design System - Storybook
 </a>
 
