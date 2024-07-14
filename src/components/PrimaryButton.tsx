@@ -15,7 +15,7 @@ const buttonTheme: Record<ButtonTheme, string> = {
   primary: 'button-fill-primary',
   secondary: 'button-fill-secondary',
   stroke: 'button-stroke',
-  destructive: 'button-fill-destructive ',
+  destructive: 'button-fill-destructive',
 };
 
 const buttonSize: Record<ButtonSize, string> = {
@@ -39,7 +39,7 @@ const PrimaryButton = ({
       onClick={onClick}
       disabled={disabled}
     >
-      <span className='min-w-16'>{children}</span>
+      <span className='min-w-16 text-white'>{children}</span>
     </button>
   );
 };
