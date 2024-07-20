@@ -1,6 +1,6 @@
 # mingle-ui
 
-<img width="1920" alt="mingle-ui-cover" src="https://github.com/designsoo/mingle-ui/assets/77719310/0a5445b8-365a-4204-9272-8f01fb13e914">
+<img width="1920" alt="mingle-ui-cover" src="https://github.com/user-attachments/assets/f4170059-7b43-4215-a6f1-7499d93886a6">
 
 **mingle-ui** is a powerful design system built with Tailwind CSS and Storybook.\
 It’s designed to help developers and designers create consistent, beautiful interfaces effortlessly.
@@ -21,9 +21,10 @@ npm install mingle-ui@latest
 
 ## Usage
 
-You can import components from mingle-ui directly as shown below:
+### Using with react-hook-form
+To use InputField with react-hook-form, follow the example below:
 
-```typescript
+```ts
 import { FormProvider, useForm } from 'react-hook-form';
 import { InputField, PrimaryButton } from "mingle-ui";
 
@@ -72,7 +73,7 @@ mingle-ui offers a wide range of components that are ready to use in your projec
 
 ## Storybook
 
-<a href='https://6669e8d86796066d6df5993c-srbezslies.chromatic.com/?path=/docs/stories-introduction--docs' target='_blank'>
+<a href='https://https://6669e8d86796066d6df5993c-fuhzwudwbq.chromatic.com/?path=/docs/stories-introduction--docs' target='_blank'>
   🔗 Mingle Design System - Storybook
 </a>
 
