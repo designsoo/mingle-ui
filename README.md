@@ -73,7 +73,7 @@ mingle-ui offers a wide range of components that are ready to use in your projec
 
 ## Storybook
 
-<a href='https://https://6669e8d86796066d6df5993c-fuhzwudwbq.chromatic.com/?path=/docs/stories-introduction--docs' target='_blank'>
+<a href='https://6669e8d86796066d6df5993c-pjwfcvhyed.chromatic.com/?path=/docs/stories-introduction--docs' target='_blank'>
   🔗 Mingle Design System - Storybook
 </a>
 
