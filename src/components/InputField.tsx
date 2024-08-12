@@ -10,7 +10,6 @@ interface CustomInputProps<T extends FieldValues> {
   formMethod: UseFormReturn<T>;
   placeholder: string;
   errorMessage?: string;
-  isRequired?: boolean;
 }
 
 type InputFieldProps<T extends FieldValues> = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps<T>> &
@@ -23,7 +22,6 @@ const InputField = <T extends FieldValues>({
   placeholder,
   formMethod,
   errorMessage,
-  isRequired,
   ...rest
 }: InputFieldProps<T>) => {
   return (
@@ -35,7 +33,6 @@ const InputField = <T extends FieldValues>({
         type={type}
         placeholder={placeholder}
         errorMessage={errorMessage}
-        isRequired={isRequired}
         {...rest}
       />
     </div>

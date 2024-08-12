@@ -9,7 +9,6 @@ interface CustomInputProps<T extends FieldValues> {
   formMethod: UseFormReturn<T>;
   placeholder: string;
   errorMessage?: string;
-  isRequired?: boolean;
 }
 
 type InputProps<T extends FieldValues> = Omit<InputHTMLAttributes<HTMLInputElement>, keyof CustomInputProps<T>> &
@@ -21,7 +20,6 @@ const Input = <T extends FieldValues>({
   placeholder,
   formMethod,
   errorMessage = '',
-  isRequired = false,
   ...rest
 }: InputProps<T>) => {
   const {
@@ -48,7 +46,7 @@ const Input = <T extends FieldValues>({
       >
         <input
           className='h-full w-full bg-transparent pr-3 text-base-16 text-neutral-200 outline-none placeholder:text-neutral-700'
-          {...register(name, { required: isRequired && errorMessage })}
+          {...register(name)}
           id={name as string}
           type={type === 'password' ? inputType : type}
           placeholder={placeholder}
@@ -68,7 +66,7 @@ const Input = <T extends FieldValues>({
         )}
       </div>
 
-      {isRequired && errors[name] && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      {errors[name] && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </>
   );
 };
