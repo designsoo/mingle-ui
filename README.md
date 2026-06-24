@@ -13,6 +13,18 @@ Install mingle-ui into your project using NPM:
 npm install mingle-ui
 ```
 
+mingle-ui ships `react` and `react-dom` as **peer dependencies**, so it works with the React version already installed in your project. Supported versions: **React 18 and React 19**. Make sure they are installed:
+
+```bash
+npm install react react-dom
+```
+
+If you use the form components (`InputField`, `Input`), also install `react-hook-form` (optional peer dependency):
+
+```bash
+npm install react-hook-form
+```
+
 If you are already using mingle-ui and want to update to the latest version, use the following command:
 
 ```bash

@@ -21,11 +21,15 @@ export default defineConfig({
       formats: ['es', 'umd', 'cjs'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: [/^react($|\/)/, /^react-dom($|\/)/, 'react-hook-form'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'jsxRuntime',
+          'react/jsx-dev-runtime': 'jsxDevRuntime',
+          'react-dom/client': 'ReactDOMClient',
+          'react-hook-form': 'ReactHookForm',
         },
       },
     },
